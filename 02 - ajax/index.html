@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<title>02 - Ajax</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="Ajax avec jQuery">
+		<meta name="author" content="Richard Bonnegent">
+		<meta name="keywords" content="JavaScript, Ajax, jQuery, correction">
+		<link rel="icon" href="favicon.ico" type="image/x-icon">
+		<link href="../css/style-ajax.css" rel="stylesheet">
+		<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+	</head>
+	<body>
+    
+		<nav class="main-nav">
+			<div class="nav-content">
+				<a href="../index.html" class="logo-link">
+					<img src="../assets/img/Image20241113115512.png" alt="Image d'accueil" class="logo-img">
+				</a>
+				<div class="menu-burger">
+					<img src="../assets/img/burger.png" alt="Menu" id="burger-menu">
+				</div>
+				<ul>
+					<li><a href="../00 - tableau/index.html">Tableau</a></li>
+					<li><a href="../01 - jquery/index.html">Jquery</a></li>
+					<li><a href="index.html" class="active">Ajax</a></li>
+					<li><a href="../tp_e-shop-front/index.html">TP_E-SHOP-FRONT</a></li>
+				</ul>
+			</div>
+		</nav>
+
+		<div id="users-post"></div>
+		<div id="users-fetch"></div>
+		<div id="users-correction"></div>
+		
+		<script src="../js/post_users-ajax.js"></script>
+		<script src="../js/fetch_users-ajax.js"></script>
+		<script src="../js/correction-ajax.js"></script>
+		<script src="../js/script-annexe.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+	</body>
+</html>

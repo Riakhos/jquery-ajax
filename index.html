@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Accueil d'un guide pour JavaScript, incluant des exercices et des projets pratiques.">
+        <meta name="author" content="Richard Bonnegent">
+        <meta name="keywords" content="JavaScript, exercices, tutoriel, guide, programmation, web development">
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="css/style.css">
+        <title>Accueil - Guide Javascript</title>
+        
+    </head>
+    <body>
+        
+        <nav class="main-nav">
+            <div class="nav-content">
+                <a href="index.html" class="logo-link active">
+                    <img src="assets/img/Image20241113115512.png" alt="Image d'accueil" class="logo-img">
+                </a>
+                <div class="menu-burger">
+                    <img src="assets/img/burger.png" alt="Menu" id="burger-menu">
+                </div>
+                <ul>
+                    <li><a href="00 - tableau/index.html">Tableau</a></li>
+                    <li><a href="01 - jquery/index.html">Jquery</a></li>
+                    <li><a href="02 - ajax/index.html">Ajax</a></li>
+                    <li><a href="tp_e-shop-front/index.html">TP_E-SHOP-FRONT</a></li>
+                </ul>
+            </div>
+        </nav>
+        
+        <header>
+            <h1>Guide JavaScript</h1>
+            <p>Bienvenue sur la page d'accueil des projets de Richard Bonnegent</p>
+        </header>
+
+        <main>
+            <section class="projects">
+                <h2>Projets principaux</h2>
+                <ul class="projects-list">
+                    <li>
+                        <h3><a href="00 - tableau/index.html">Tableau</a></h3>
+                        <p>
+                            <strong>Objectif :</strong> Manipuler des tableaux en JavaScript à travers plusieurs exercices pratiques.<br><br>
+                            <strong>Exercices proposés :</strong>
+                            <ul>
+                                <li><strong>Création et affichage d’un tableau :</strong> Générer dynamiquement un tableau HTML à partir d’un tableau JavaScript, affiché dans la page (<code>#array</code>).</li>
+                                <li><strong>Manipulation de collections :</strong> Utiliser différentes méthodes (boucles, <code>forEach</code>, <code>map</code>, etc.) pour parcourir, filtrer et afficher des collections de données (<code>#collection</code>, <code>#divCollection</code>, <code>#divCollectionFor</code>).</li>
+                                <li><strong>Correction guidée :</strong> Proposer une solution détaillée et commentée pour chaque exercice, permettant de comparer son code avec une correction type.</li>
+                                <li><strong>Astuce interactive :</strong> Un système de tooltip affiche des explications ou extraits de code au survol de certains éléments pour mieux comprendre la logique.</li>
+                            </ul>
+                            <strong>Compétences travaillées :</strong> 
+                            <ul>
+                                <li>Création, parcours et affichage de tableaux en JavaScript</li>
+                                <li>Utilisation des méthodes d’itération (<code>for</code>, <code>forEach</code>, <code>map</code>, etc.)</li>
+                                <li>Manipulation du DOM pour générer dynamiquement du contenu HTML</li>
+                                <li>Compréhension des bonnes pratiques de structuration de code</li>
+                            </ul>
+                        </p>
+                    </li>
+                    <li>
+                        <h3><a href="01 - jquery/index.html">Jquery</a></h3>
+                        <p>
+                            <strong>Objectif :</strong> Découvrir et pratiquer la bibliothèque jQuery à travers des exercices interactifs.<br><br>
+                            <strong>Exercices proposés :</strong>
+                            <ul>
+                                <li>
+                                    <strong>Introduction à jQuery :</strong>
+                                    Comprendre les bases de jQuery, la sélection et la manipulation d’éléments du DOM, et la syntaxe simplifiée.<br>
+                                    <a href="#" class="open-modal" data-md="01 - jquery/introduction_jquery.md">Lire l’introduction</a>
+                                </li>
+                                <li>
+                                    <strong>Utilisation avancée :</strong>
+                                    Mise en place d’interactivité, gestion des événements, effets visuels et animations.<br>
+                                    <a href="#" class="open-modal" data-md="01 - jquery/utilisation_jquery.md">Voir les exemples d’utilisation</a>
+                                </li>
+                                <li>
+                                    <strong>Pratique :</strong>
+                                    Manipuler des listes, des tableaux et des formulaires avec jQuery pour rendre les pages dynamiques.
+                                </li>
+                                <li>
+                                    <strong>Bonus :</strong>
+                                    Affichage de notifications (toasts) ou de fenêtres modales pour présenter des extraits de documentation ou d’exemples de code.
+                                </li>
+                            </ul>
+                            <strong>Compétences travaillées :</strong>
+                            <ul>
+                                <li>Comprendre la syntaxe et les sélecteurs jQuery</li>
+                                <li>Ajouter des effets et des animations</li>
+                                <li>Gérer les événements utilisateur</li>
+                                <li>Afficher dynamiquement des contenus (modals, toasts) à partir de fichiers Markdown</li>
+                            </ul>
+                        </p>
+                    </li>
+                    <li>
+                        <h3><a href="02 - ajax/index.html">Ajax</a></h3>
+                        <p>
+                            <strong>Objectif :</strong> Comprendre et pratiquer la technologie AJAX pour réaliser des requêtes asynchrones en JavaScript.<br><br>
+                            <strong>Ressources et exercices :</strong>
+                            <ul>
+                                <li>
+                                    <strong>Introduction à AJAX :</strong>
+                                    Présentation du principe d’AJAX, de son intérêt et de ses usages dans le développement web moderne.<br>
+                                    <a href="#" class="open-modal" data-md="02 - ajax/introduction_ajax.md">Lire l’introduction</a>
+                                </li>
+                                <li>
+                                    <strong>Utilisation d’AJAX :</strong>
+                                    Mise en œuvre concrète d’AJAX avec JavaScript : exemples de requêtes, gestion des réponses, et affichage dynamique des données.<br>
+                                    <a href="#" class="open-modal" data-md="02 - ajax/utilisation_ajax.md">Voir un exemple d’utilisation</a>
+                                </li>
+                                <li>
+                                    <strong>Pratique :</strong>
+                                    Exercices pour manipuler les requêtes AJAX, afficher des résultats sans recharger la page, et interagir avec des API.
+                                </li>
+                            </ul>
+                            <strong>Compétences travaillées :</strong>
+                            <ul>
+                                <li>Comprendre le fonctionnement d’AJAX et son intérêt</li>
+                                <li>Réaliser des requêtes asynchrones avec <code>XMLHttpRequest</code> et <code>fetch</code></li>
+                                <li>Mettre à jour le DOM dynamiquement selon les réponses serveur</li>
+                                <li>Gérer les erreurs et optimiser l’expérience utilisateur</li>
+                            </ul>
+                        </p>
+                    </li>
+                    <li>
+                        <h3>Node.js</h3>
+                        <p>
+                            <strong>Objectif :</strong> Découvrir Node.js, l’environnement d’exécution JavaScript côté serveur, à travers des ressources interactives.<br><br>
+                            <strong>Ressources et exercices :</strong>
+                            <ul>
+                                <li>
+                                    <strong>Introduction à Node.js :</strong>
+                                    Présentation de Node.js, ses avantages et ses usages pour le développement backend.<br>
+                                    <a href="#" class="open-modal" data-md="03 - nodejs/introduction_nodejs.md">Lire l’introduction</a>
+                                </li>
+                                <li>
+                                    <strong>Utilisation de Node.js :</strong>
+                                    Exemples pratiques : création de serveurs web, gestion de fichiers, communication réseau.<br>
+                                    <a href="#" class="open-modal" data-md="03 - nodejs/utilisation_nodejs.md">Voir un exemple d’utilisation</a>
+                                </li>
+                                <li>
+                                    <strong>Pratique :</strong>
+                                    Exercices pour manipuler les modules Node.js, créer des API simples et automatiser des tâches côté serveur.
+                                </li>
+                            </ul>
+                            <strong>Compétences travaillées :</strong>
+                            <ul>
+                                <li>Comprendre le fonctionnement de Node.js et son intérêt</li>
+                                <li>Créer un serveur web avec Node.js</li>
+                                <li>Lire et écrire des fichiers côté serveur</li>
+                                <li>Communiquer avec des clients via HTTP</li>
+                            </ul>
+                        </p>
+                    </li>
+                    <li>
+                        <h3><a href="tp_e-shop-front/index.html">TP_E-SHOP-FRONT</a></h3>
+                        <p>
+                            <strong>Objectif :</strong> Projet fil rouge : création d’une interface e-commerce complète en JavaScript.<br><br>
+                            <strong>Fonctionnalités principales :</strong>
+                            <ul>
+                                <li><strong>Gestion des articles :</strong> Ajout, modification, suppression et affichage dynamique des articles du catalogue.</li>
+                                <li><strong>Formulaires interactifs :</strong> Utilisation de formulaires pour la saisie et la mise à jour des informations produits, avec validation côté client.</li>
+                                <li><strong>Navigation dynamique :</strong> Navigation entre les différentes pages (accueil, ajout, détail, modification) sans rechargement complet grâce à JavaScript et AJAX.</li>
+                                <li><strong>Expérience utilisateur :</strong> Utilisation de Bootstrap et d’effets visuels pour une interface moderne et responsive.</li>
+                            </ul>
+                            <strong>Compétences travaillées :</strong>
+                            <ul>
+                                <li>Manipulation avancée du DOM et des événements JavaScript</li>
+                                <li>Utilisation de fetch/AJAX pour la communication asynchrone</li>
+                                <li>Structuration d’un projet web multi-pages</li>
+                                <li>Intégration de Bootstrap pour le design responsive</li>
+                            </ul>
+                        </p>
+                    </li>
+                </ul>
+            </section>
+        </main>
+        
+        <div id="modal-jquery" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <div id="modal-body"></div>
+            </div>
+        </div>
+
+	    <script src="js/script.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    </body>
+</html>

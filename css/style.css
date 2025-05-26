@@ -1,0 +1,366 @@
+/* ===========================
+   TYPOGRAPHIE ET TITRES
+   =========================== */
+h1, h2, h3 {
+    text-align: center;
+    color: #222;
+    margin-top: 0.5em;
+}
+h1 {
+    color: #f7df1e;
+}
+h2 {
+    background-color: #f7df1e;
+    color: #222;
+    padding: 8px;
+    border-radius: 8px;
+    margin-bottom: 1em;
+}
+
+/* ===========================
+   BASE ET LAYOUT
+   =========================== */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f5f7fa;
+    margin: 0;
+    padding: 0;
+    color: #222;
+    text-align: center;
+}
+
+/* ===========================
+   NAVIGATION PRINCIPALE (main-nav)
+   =========================== */
+nav {
+    background: #222;
+    padding: 1em 0;
+}
+nav.main-nav .nav-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1em;
+    position: relative;
+}
+/* Logo à gauche */
+.logo-link {
+    display: flex;
+    align-items: center;
+    background: none !important;
+    padding: 0.2em 0.8em;
+}
+.logo-img {
+    height: 50px;
+    width: auto;
+    vertical-align: middle;
+    transition: transform 0.25s, box-shadow 0.25s;
+    box-shadow: none;
+}
+.logo-link:hover .logo-img,
+.logo-link:focus .logo-img {
+    transform: scale(1.12);
+    box-shadow: 0 0 12px 2px #f7df1e, 0 2px 8px #0002;
+}
+.logo-link.active .logo-img {
+    box-shadow: 0 0 12px 2px #f7df1e, 0 2px 8px #0002;
+}
+/* Bouton menu burger (mobile) */
+.menu-burger {
+    display: none;
+    position: absolute;
+    right: 0.5em;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 100;
+}
+.menu-burger img {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+/* Liste des liens */
+nav.main-nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+nav.main-nav ul li a {
+    color: #f7df1e;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.3em 1em;
+    border-radius: 6px;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s, transform 0.2s;
+}
+nav.main-nav ul li a:hover,
+nav.main-nav ul li a.active {
+    background: #f7df1e;
+    color: #222;
+    transform: scale(1.08);
+    box-shadow: 0 0 12px 2px #f7df1e, 0 2px 8px #0002;
+    text-decoration: none;
+}
+
+/* ===========================
+   NAVBAR BOOTSTRAP (E-SHOP)
+   =========================== */
+.navbar.navbar-expand-lg {
+    background: #fff !important; /* Fond blanc */
+    box-shadow: 0 2px 8px #0001;
+}
+.navbar-nav .nav-link,
+.navbar-brand {
+    color: #f7df1e;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.3em 1em;
+    border-radius: 6px;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s, transform 0.2s;
+}
+.navbar-nav .nav-link.active,
+.navbar-brand.active,
+.navbar-nav .nav-link:hover,
+.navbar-brand:hover {
+    background: #f7df1e;
+    color: #222;
+    transform: scale(1.08);
+    box-shadow: 0 0 12px 2px #f7df1e, 0 2px 8px #0002;
+    text-decoration: none;
+}
+
+/* ===========================
+   CONTENANTS PRINCIPAUX
+   =========================== */
+.container, .projects, .exercice, section {
+    max-width: 1000px;
+    margin: 2em auto;
+    padding: 2em;
+    background: #222;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px #0001;
+    text-align: center;
+}
+
+/* ===========================
+   BOUTONS
+   =========================== */
+.btn {
+    background: #f7df1e;
+    color: #222;
+    border: none;
+    border-radius: 8px;
+    padding: 0.7em 1.5em;
+    font-size: 1.1em;
+    font-weight: bold;
+    margin: 1em 0;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+.btn:hover, .btn.active {
+    background: #f7df1e;
+    color: #222;
+    transform: scale(1.08);
+    box-shadow: 0 0 12px 2px #f7df1e, 0 2px 8px #0002;
+    text-decoration: none;
+}
+
+/* ===========================
+   INPUTS ET TEXTAREA
+   =========================== */
+input[type="text"], textarea {
+    width: 100%;
+    border-radius: 8px;
+    border: 2px solid #222;
+    padding: 10px;
+    font-size: 1.1em;
+    margin: 1em 0;
+    box-sizing: border-box;
+}
+
+/* ===========================
+   LISTE DES PROJETS
+   =========================== */
+.projects-list, .projects-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 2em auto;
+    max-width: 1000px;
+}
+.projects-list li {
+    background: #f5f7fa;
+    margin-bottom: 1em;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px #0001;
+    padding: 1.5em 1.2em;
+    text-align: left;
+    transition: box-shadow 0.2s;
+    border-left: 4px solid #f7df1e;
+}
+.projects-list li:hover {
+    box-shadow: 0 4px 16px #f7df1e, 0 2px 8px #0002;
+}
+.projects-list h3 {
+    margin-top: 0;
+}
+.projects-list a {
+    color: #f7df1e;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.3em 1em;
+    border-radius: 6px;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s, transform 0.2s;
+}
+.projects-list a:hover {
+    background: #f7df1e;
+    color: #222;
+    transform: scale(1.08);
+    box-shadow: 0 0 12px 2px #f7df1e, 0 2px 8px #0002;
+    text-decoration: none;
+}
+
+/* ===========================
+   MODALE PERSONNALISÉE JQUERY
+   =========================== */
+
+/* Conteneur de la modale (cachée par défaut) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0; top: 0;
+    width: 100vw; height: 100vh;
+    background: rgba(0,0,0,0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+/* Affichage de la modale quand la classe .show est présente */
+.modal.show {
+    display: flex;
+}
+
+/* Contenu de la modale */
+.modal-content {
+    background: #fff;
+    border-radius: 10px;
+    padding: 2em;
+    max-width: 600px;
+    width: 90vw;
+    max-height: 80vh;         /* Limite la hauteur */
+    overflow-y: auto;         /* Scroll si besoin */
+    box-shadow: 0 2px 16px #0004;
+    position: relative;
+    text-align: left;
+}
+
+/* Bouton de fermeture de la modale */
+.close-modal {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    font-size: 2.5em;
+    color: #f7df1e;
+    cursor: pointer;
+    transition: color 0.2s, transform 0.2s, box-shadow 0.2s;
+    box-shadow: none;
+}
+
+/* Effet lueur jaune au survol */
+.close-modal:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 12px 2px #f7df1e, 0 2px 8px #0002;
+}
+
+/* Style du titre dans la modale Jquery */
+#modal-jquery h1 {
+    background: #222;
+    color: #f7df1e;
+    padding: 0.5em 1em;
+    border-radius: 8px;
+    margin-top: 0;
+    margin-bottom: 1em;
+    text-align: center;
+    font-size: 2em;
+    letter-spacing: 1px;
+}
+
+/* ===========================
+   RESPONSIVE : NAVBAR & MENU BURGER
+   =========================== */
+@media (max-width: 600px) {
+    nav.main-nav .nav-content {
+        flex-direction: row;
+        padding: 0 0.5em;
+    }
+    .menu-burger {
+        display: block;
+    }
+    nav.main-nav ul {
+        display: none;
+        flex-direction: column;
+        background: #222;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100vw;
+        z-index: 150;
+        box-shadow: 0 2px 8px #0004;
+        border-radius: 0 0 12px 12px;
+        margin: 0;
+        padding: 0.5em 0;
+    }
+    nav.main-nav ul.open {
+        display: flex;
+    }
+    nav.main-nav ul li {
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid #444;
+    }
+    nav.main-nav ul li:last-child {
+        border-bottom: none;
+    }
+    .logo-link {
+        padding: 0.2em 0.2em;
+    }
+    nav.main-nav ul li a {
+        color: #fff !important;
+        background: none !important;
+        padding: 1em 0;
+        display: block;
+        font-weight: bold;
+        border-radius: 0;
+    }
+    nav.main-nav ul li a.active {
+        background: #f7df1e !important;
+        color: #222 !important;
+        text-decoration: none !important;
+    }
+}
+
+/* Labels jaunes pour tous les formulaires Bootstrap */
+label.form-label,
+label.form-check-label {
+    color: #f7df1e !important;
+    font-weight: bold;
+}
+
+/* Personnalisation de la checkbox Bootstrap */
+.form-check-input:checked {
+    background-color: #f7df1e;
+    border-color: #f7df1e;
+}
+.form-check-input:focus {
+    box-shadow: 0 0 0 0.2rem rgba(247, 223, 30, 0.25);
+}
+.form-check-input {
+    border: 2px solid #f7df1e;
+}

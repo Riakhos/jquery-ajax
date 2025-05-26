@@ -1,0 +1,498 @@
+/* ===========================
+   TYPOGRAPHIE ET TITRES
+   =========================== */
+h1, h2, h3 {
+    text-align: center;
+    color: #222;
+    margin-top: 0.5em;
+}
+
+h2 {
+    background-color: #f7df1e;
+    color: #222;
+    padding: 8px;
+    border-radius: 8px;
+    margin-bottom: 1em;
+}
+
+/* ===========================
+   BASE ET LAYOUT
+   =========================== */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #f5f7fa;
+    margin: 0;
+    padding: 0;
+    color: #222;
+    text-align: center;
+}
+
+/* ===========================
+   NAVIGATION PRINCIPALE
+   =========================== */
+nav {
+    background: #222;
+    padding: 1em 0;
+}
+
+/* Conteneur de la navbar */
+nav.main-nav .nav-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1em;
+    position: relative;
+}
+
+/* Logo à gauche */
+.logo-link {
+    display: flex;
+    align-items: center;
+    background: none !important;
+    padding: 0.2em 0.8em;
+}
+
+.logo-img {
+    height: 50px;
+    width: auto;
+    vertical-align: middle;
+    transition: transform 0.25s, box-shadow 0.25s;
+    box-shadow: none;
+}
+
+/* Effet zoom et ombre sur le logo au survol/focus */
+.logo-link:hover .logo-img,
+.logo-link:focus .logo-img {
+    transform: scale(1.12);
+    box-shadow: 0 0 12px 2px #f7df1e, 0 2px 8px #0002;
+}
+
+/* Ombre sur le logo actif */
+.logo-link.active .logo-img {
+    box-shadow: 0 0 12px 2px #f7df1e, 0 2px 8px #0002;
+}
+
+/* Bouton menu burger (mobile) */
+.menu-burger {
+    display: none;
+    position: absolute;
+    right: 0.5em;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 100;
+}
+.menu-burger img {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+/* ===========================
+   NAVIGATION : LISTE DES LIENS
+   =========================== */
+nav.main-nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+/* Liens de la navbar */
+nav.main-nav ul li a {
+    color: #f7df1e;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.3em 1em;
+    border-radius: 6px;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s, transform 0.2s;
+}
+
+/* Effet hover et actif sur les liens de la navbar */
+nav.main-nav ul li a:hover,
+nav.main-nav ul li a.active {
+    background: #f7df1e;
+    color: #222;
+    transform: scale(1.08);
+    box-shadow: 0 0 12px 2px #f7df1e, 0 2px 8px #0002;
+    text-decoration: none;
+}
+
+/* ===========================
+   CONTENANTS PRINCIPAUX
+   =========================== */
+.container, .projects, .exercice, section {
+    max-width: 1000px;
+    margin: 2em auto;
+    padding: 2em;
+    background: #222;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px #0001;
+    text-align: center;
+}
+
+/* ===========================
+   BOUTONS
+   =========================== */
+button {
+    background: #222;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 0.7em 1.5em;
+    font-size: 1.1em;
+    margin: 1em 0;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+
+/* Effet hover sur les boutons */
+button:hover {
+    background: #f7df1e;
+    color: #222;
+}
+
+/* ===========================
+   INPUTS ET TEXTAREA
+   =========================== */
+input[type="text"], textarea {
+    width: 90%;
+    border-radius: 8px;
+    border: 2px solid #222;
+    padding: 10px;
+    font-size: 1.1em;
+    margin: 1em 0;
+    box-sizing: border-box;
+}
+
+/* ===========================
+   LISTE DES PROJETS
+   =========================== */
+.projects-list, .projects-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 2em auto;
+    max-width: 1000px;
+}
+
+.projects-list li {
+    background: #f5f7fa;
+    margin-bottom: 1em;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px #0001;
+    padding: 1.5em 1.2em;
+    text-align: left;
+    transition: box-shadow 0.2s;
+    border-left: 4px solid #f7df1e;
+}
+
+/* Effet hover sur un projet */
+.projects-list li:hover {
+    box-shadow: 0 4px 16px #f7df1e, 0 2px 8px #0002;
+}
+
+.projects-list h3 {
+    margin-top: 0;
+}
+
+/* Liens dans la liste des projets */
+.projects-list a {
+    color: #f7df1e;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.3em 1em;
+    border-radius: 6px;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s, transform 0.2s;
+}
+
+/* Effet hover sur les liens de la liste des projets */
+.projects-list a:hover {
+    background: #f7df1e;
+    color: #222;
+    transform: scale(1.08);
+    box-shadow: 0 0 12px 2px #f7df1e, 0 2px 8px #0002;
+    text-decoration: none;
+}
+
+/* ===========================
+   MODALE PERSONNALISÉE JQUERY
+   =========================== */
+
+/* Conteneur de la modale (cachée par défaut) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0; top: 0;
+    width: 100vw; height: 100vh;
+    background: rgba(0,0,0,0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+/* Affichage de la modale quand la classe .show est présente */
+.modal.show {
+    display: flex;
+}
+
+/* Contenu de la modale */
+.modal-content {
+    background: #fff;
+    border-radius: 10px;
+    padding: 2em;
+    max-width: 600px;
+    width: 90vw;
+    max-height: 80vh;         /* Limite la hauteur */
+    overflow-y: auto;         /* Scroll si besoin */
+    box-shadow: 0 2px 16px #0004;
+    position: relative;
+    text-align: left;
+}
+
+/* Bouton de fermeture de la modale */
+.close-modal {
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    font-size: 2.5em;
+    color: #f7df1e;
+    cursor: pointer;
+    transition: color 0.2s, transform 0.2s, box-shadow 0.2s;
+    box-shadow: none;
+}
+
+/* Effet lueur jaune au survol */
+.close-modal:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 12px 2px #f7df1e, 0 2px 8px #0002;
+}
+
+/* Style du titre dans la modale Jquery */
+#modal-jquery h1 {
+    background: #222;
+    color: #f7df1e;
+    padding: 0.5em 1em;
+    border-radius: 8px;
+    margin-top: 0;
+    margin-bottom: 1em;
+    text-align: center;
+    font-size: 2em;
+    letter-spacing: 1px;
+}
+
+/* ===========================
+   RESPONSIVE : NAVBAR & MENU BURGER
+   =========================== */
+@media (max-width: 600px) {
+    nav.main-nav .nav-content {
+        flex-direction: row;
+        padding: 0 0.5em;
+    }
+    .menu-burger {
+        display: block;
+    }
+    nav.main-nav ul {
+        display: none;
+        flex-direction: column;
+        background: #222;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100vw;
+        z-index: 150;
+        box-shadow: 0 2px 8px #0004;
+        border-radius: 0 0 12px 12px;
+        margin: 0;
+        padding: 0.5em 0;
+    }
+    nav.main-nav ul.open {
+        display: flex;
+    }
+    nav.main-nav ul li {
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid #444;
+    }
+    nav.main-nav ul li:last-child {
+        border-bottom: none;
+    }
+    .logo-link {
+        padding: 0.2em 0.2em;
+    }
+    nav.main-nav ul li a {
+        color: #fff !important;
+        background: none !important;
+        padding: 1em 0;
+        display: block;
+        font-weight: bold;
+        border-radius: 0;
+    }
+    nav.main-nav ul li a.active {
+        background: #f7df1e !important;
+        color: #222 !important;
+        text-decoration: none !important;
+    }
+}
+
+/* ===========================
+   BLOCS ET TITRES
+   =========================== */
+
+/* Bloc de téléchargement ou d'information principal */
+#download {
+    background: #222;
+    color: #fff;
+    padding: 1em 2em;
+    border-radius: 8px;
+    text-align: center;
+    margin: 2em auto 1em auto;
+    max-width: 400px;
+    font-size: 1.1em;
+    box-shadow: 0 2px 8px #0002;
+}
+
+/* Titres principaux */
+h1 {
+    text-align: center;
+    font-size: 2em;
+    margin: 1.5em 0 1em 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    letter-spacing: 1px;
+}
+
+/* ===========================
+   IMAGES ET ILLUSTRATIONS
+   =========================== */
+
+/* Image draggable */
+img.drag {
+    display: block;
+    margin: 2em auto 1em auto;
+    max-width: 180px;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px #0001;
+}
+
+/* ===========================
+   BLOCS D'EXERCICES ET ÉLÉMENTS INTERACTIFS
+   =========================== */
+
+/* Styles pour les blocs avion et voiture */
+.avion, .voiture {
+    display: inline-block;
+    margin: 0.5em 1em 0.5em 0;
+    padding: 0.5em 1.2em;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 1.1em;
+    background: #e3f2fd;
+    box-shadow: 0 1px 4px #0001;
+    transition: background 0.2s;
+}
+
+/* Conteneur pour centrer les groupes de boutons ou éléments */
+.center-group {
+    text-align: center;
+    width: 100%;
+    margin: 1em 0;
+}
+
+/* Couleur spécifique pour voiture */
+.voiture { background: #fff3e0; }
+
+/* Effet hover sur avion et voiture */
+.avion:hover, .voiture:hover { background: #ffe082; }
+
+/* ===========================
+   TABLEAUX
+   =========================== */
+
+table {
+    margin: 2em auto;
+    border-collapse: collapse;
+    box-shadow: 0 2px 8px #0001;
+    background: #fff;
+}
+td {
+    padding: 1em 2em;
+    border: 1px solid #bbb;
+    font-size: 1.1em;
+    text-align: center;
+}
+
+/* ===========================
+   PARAGRAPHES ET TEXTES
+   =========================== */
+
+p {
+    margin: 0.7em auto;
+    max-width: 600px;
+    font-size: 1.08em;
+    background: #fff;
+    border-radius: 6px;
+    padding: 0.5em 1em;
+    box-shadow: 0 1px 4px #0001;
+    text-align: center;
+}
+
+/* ===========================
+   BLOCS STRUCTURANTS (section, article, aside, span)
+   =========================== */
+
+section, article, aside, span {
+    display: block;
+    margin: 1.2em auto;
+    max-width: 600px;
+    padding: 0.7em 1.2em;
+    border-radius: 8px;
+    background: #e1bee7;
+    font-size: 1.1em;
+    box-shadow: 0 1px 4px #0001;
+    text-align: center;
+}
+
+/* Couleurs spécifiques pour chaque type de bloc */
+section#masection { background: #ffe0b2; }
+article { background: #b2dfdb; }
+aside { background: #c8e6c9; }
+span { background: #bbdefb; }
+
+/* ===========================
+   RÉSULTATS ET AFFICHAGE FINAL
+   =========================== */
+
+#resultat {
+    margin: 2em auto;
+    max-width: 600px;
+    background: #fffde7;
+    border-radius: 8px;
+    padding: 1em 2em;
+    font-size: 1.1em;
+    box-shadow: 0 2px 8px #0001;
+    text-align: center;
+}
+
+/* ===========================
+   TOOLTIP POUR LE CODE
+   =========================== */
+
+/* Astuce/infobulle pour afficher du code */
+.tooltip-code {
+    position: absolute;
+    background: #222;
+    color: #fff;
+    padding: 0.7em 1em;
+    border-radius: 8px;
+    font-size: 0.95em;
+    white-space: pre-line;
+    z-index: 1000;
+    box-shadow: 0 2px 8px #0004;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.2s;
+}

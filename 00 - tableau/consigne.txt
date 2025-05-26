@@ -1,0 +1,17 @@
+Etape 1
+
+1 - Créez un document HTML contenant une div et un id ="array".
+
+2 - Créez un fichier array.js qui contiendra un tableau avec cinq valeurs de votre choix.
+
+3 - Itérez sur votre tableau et affichez le contenu dans la div du document.
+
+Etape 2
+
+0 - Ajoutez une `div` avec un `id` nommé "collection".
+
+1 - Créez un fichier `collection.js`.
+
+2 - Créez un tableau d'objets contenant les données suivantes : `prenom`, `age`, et `ville` (utilisez les valeurs de votre choix pour ces propriétés).
+
+3 - Itérez sur votre tableau d'objets et affichez les données dans la `div` ayant l'`id` "collection".

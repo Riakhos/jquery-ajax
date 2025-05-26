@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+			<title>01 - JQuery</title>
+			<meta charset="UTF-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+			<meta name="description" content="Sélection d'éléments du DOM avec jQuery">
+			<meta name="author" content="Richard Bonnegent">
+			<meta name="keywords" content="JavaScript, jQuery, DOM, sélection, correction">
+			<link rel="icon" href="favicon.ico" type="image/x-icon">
+			<link href="../css/style-jquery.css" rel="stylesheet">
+			<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+			<script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js" integrity="sha256-9zljDKpE/mQxmaR4V2cGVaQ7arF3CcXxarvgr7Sj8Uc=" crossorigin="anonymous"></script>
+		</head>
+	<body>
+		
+		<nav class="main-nav">
+			<div class="nav-content">
+				<a href="../index.html" class="logo-link">
+					<img src="../assets/img/Image20241113115512.png" alt="Image d'accueil" class="logo-img">
+				</a>
+				<div class="menu-burger">
+					<img src="../assets/img/burger.png" alt="Menu" id="burger-menu">
+				</div>
+				<ul>
+					<li><a href="../00 - tableau/index.html">Tableau</a></li>
+					<li><a href="index.html" class="active">Jquery</a></li>
+					<li><a href="../02 - ajax/index.html">Ajax</a></li>
+					<li><a href="../tp_e-shop-front/index.html">TP_E-SHOP-FRONT</a></li>
+				</ul>
+			</div>
+		</nav>
+    
+		<p id="download">JQuery n'est pas chargé</p>
+		<img class="drag" src="../assets/img/Image20241113115512.png" alt="image-js">
+		<h1>
+			Comment sélectionner des éléments de la page web (dom) pour effectuer daces
+			traitements ?
+		</h1>
+
+		<div class="center-group">
+			<div class="avion"
+				title="Bloc Avion sélectionné par $('.avion')"
+				data-code="$(monAvion).css('color', 'blue');">
+				Avion1
+			</div>
+			<div class="avion"
+				title="Bloc Avion sélectionné par $('.avion')"
+				data-code="$(monAvion).css('color', 'blue');">
+				Avion2
+			</div>
+			<div class="avion"
+				title="Bloc Avion sélectionné par $('.avion')"
+				data-code="$(monAvion).css('color', 'blue');">
+				Avion3
+			</div>
+		</div>
+		<div class="center-group">
+			<div class="voiture"
+				title="Bloc Voiture sélectionné par $('.voiture') puis couleurs spécifiques"
+				data-code="
+					$(maVoiture).css('color', 'green');
+					$(maVoiture.first()).css('color', 'blue');
+					$(maVoiture).eq(1).css('color', 'orange');">
+				Voiture1
+			</div>
+			<div class="voiture"
+				title="Bloc Voiture sélectionné par $('.voiture') puis couleurs spécifiques"
+				data-code="
+					$(maVoiture).css('color', 'green');
+					$(maVoiture.first()).css('color', 'blue');
+					$(maVoiture).eq(1).css('color', 'orange');">
+				Voiture2
+			</div>
+			<div class="voiture"
+				title="Bloc Voiture sélectionné par $('.voiture') puis couleurs spécifiques"
+				data-code="
+					$(maVoiture).css('color', 'green');
+					$(maVoiture.first()).css('color', 'blue');
+					$(maVoiture).eq(1).css('color', 'orange');">
+				Voiture3
+			</div>
+		</div>
+
+		<table 
+			title="Table sélectionnée par $('table')"
+			data-code="$('table').css('background', '#fff');&#10;// 2e ligne : $('table tr').eq(1).find('td').css({...})&#10;// 3e ligne : $('table tr').eq(2).find('td').css({...})">
+			<tr>
+				<td>TD #0</td>
+				<td>TD #1</td>
+				<td>TD #2</td>
+			</tr>
+			<tr
+				title="Deuxième ligne sélectionnée par $('table tr').eq(1).find('td')"
+				data-code="$('table tr').eq(1).find('td').css({ background: '#ffe082', color: '#1565c0' });">
+				<td>TD #3</td>
+				<td>TD #4</td>
+				<td>TD #5</td>
+			</tr>
+			<tr
+				title="Troisième ligne sélectionnée par $('table tr').eq(2).find('td')"
+				data-code="$('table tr').eq(2).find('td').css({ background: '#b2dfdb', color: '#c62828' });">
+				<td>TD #6</td>
+				<td>TD #7</td>
+				<td>TD #8</td>
+			</tr>
+		</table>
+
+		<p title="Paragraphe sélectionné par $('p')" data-code="$('p').css('color', 'orange');">
+			paragraphe 1
+		</p>
+		<p title="Paragraphe 2 : background, couleur et taille modifiés par jQuery"
+		data-code="$('p').eq(1).css({ background: '#ffe082', color: '#1565c0', fontSize: '1.3em' });">
+			paragraphe 2
+		</p>
+		<p title="Paragraphe 3 : taille de police modifiée par jQuery"
+		data-code="$('p').eq(2).css('font-size', '1.3em');">
+			paragraphe 3
+		</p>
+		<p title="Paragraphe 4 : même style que paragraphe 2 (background et couleur)"
+		data-code="$('p').eq(3).css({ background: '#ffe082', color: '#1565c0' });">
+			paragraphe 4
+		</p>
+		<p title="Paragraphe 5 : couleur et fond clignotants avec setInterval"
+		data-code="setInterval(() => {
+			p5.css('background', p5.css('background-color') === 'rgb(198, 40, 40)' ? '#1565c0' : '#c62828');
+			p5.css('color', p5.css('color') === 'rgb(255, 255, 255)' ? '#ffe082' : '#fff');
+		}, 500);">
+			paragraphe 5
+		</p>
+
+		<section id="masection"
+			title="Section HTML sélectionnée par $('section')"
+			data-code="$('section').css('color', 'red');">
+			Section
+		</section>
+
+		<article
+			title="Article HTML sélectionné par $('article')"
+			data-code="$('article').css('color', '#1565c0');">
+			article
+		</article>
+
+		<aside
+			title="Aside HTML sélectionné par $('aside')"
+			data-code="$('aside').css('color', '#1565c0');">
+			aside
+		</aside>
+
+		<span
+			title="Span HTML sélectionné par $('span')"
+			data-code="$('span').css('color', 'purple');">
+			span
+		</span>		
+
+		<div id="resultat">resultat...</div>
+		
+		<script>
+			/* 
+			---------------------------------------
+			SÉLECTIONNE LA CLASS AVION
+
+			AFFECT LA SELECTION DE LA CLASS A UNE VARIABLE,
+			PUIS CHANGE LA COULEUR DU TEXT
+			---------------------------------------
+			*/
+			let monAvion = $('.avion')
+
+			$(monAvion).css('color', 'blue')
+			
+			/* 
+			---------------------------------------
+			SÉLECTIONNE LA CLASS VOITURE
+
+			AFFECT LA SELECTION DE LA CLASS A UNE VARIABLE,
+			PUIS CHANGE LA COULEUR DU TEXT
+
+			AFFECT UNE COULEUR SPÉCIFIQUE A LA PREMIER VOITURE
+
+			AFFECT UNE COULEUR SPÉCIFIQUE A LA SECONDE
+			---------------------------------------
+			*/
+			let maVoiture = $('.voiture')
+
+			$(maVoiture).css('color', 'green')
+			
+			// $(maVoiture[0]).css('color', 'blue')
+			$(maVoiture.first()).css('color', 'blue')
+
+			// $(maVoiture[1]).css('color', 'orange')
+			$(maVoiture).eq(1).css('color', 'orange')
+			
+			/* 
+			---------------------------------------
+			SÉLECTIONNE LE DEUXIÈME TR ET CHANGE LE STYLE DES TD 3, 4, 5
+			---------------------------------------
+			*/
+			let secondRowTds = $('table tr').eq(1).find('td');
+			secondRowTds.css({
+				'background': '#ffe082',
+				'color': '#1565c0'
+			});
+
+			/* 
+			---------------------------------------
+			SÉLECTIONNE LE TROISIÈME TR ET CHANGE LE STYLE DES TD 6, 7, 8
+			---------------------------------------
+			*/
+			let thirdRowTds = $('table tr').eq(2).find('td');
+			thirdRowTds.css({
+				'background': '#b2dfdb',
+				'color': '#c62828'
+			});
+
+			/* 
+			---------------------------------------
+			SÉLECTIONNE LES PARAGRAPHES ET APPLIQUE DES STYLES SPÉCIFIQUES
+			---------------------------------------
+			*/
+
+			// Paragraphe 1 : changer color
+			let p1 = $('p');
+			p1.css({
+				'color': 'orange',
+			});
+
+			// Paragraphe 2 : changer background, color et font-size
+			let p2 = $('p').eq(2);
+			p2.css({
+				'background': '#ffe082',
+				'color': '#1565c0',
+				'font-size': '1.3em'
+			});
+
+			// Paragraphe 3 : changer uniquement font-size
+			let p3 = $('p').eq(3);
+			p3.css('font-size', '1.3em');
+
+			// Paragraphe 4 : même background et color que paragraphe 2
+			let p4 = $('p').eq(4);
+			p4.css({
+				'background': '#ffe082',
+				'color': '#1565c0'
+			});
+
+			// Paragraphe 5 : background et couleur clignotante
+			let p5 = $('p').eq(5);
+			p5.css({
+				'background': '#c62828',
+				'color': '#fff'
+			});
+			setInterval(() => {
+				p5.css('background', p5.css('background-color') === 'rgb(198, 40, 40)' ? '#1565c0' : '#c62828');
+				p5.css('color', p5.css('color') === 'rgb(255, 255, 255)' ? '#ffe082' : '#fff');
+			}, 500);
+
+			/* 
+			---------------------------------------
+			SÉLECTIONNE MULTIPLE (h1, article, aside)
+
+			AFFECT LA SELECTION DES BALISES A UNE VARIABLE,
+			PUIS CHANGE LA COULEUR DES ELEMENTS
+			---------------------------------------
+			*/
+			let multiple = $('h1, article, aside')
+
+			$(multiple).css('color', '#1565c0')
+			
+			/*
+			------------------------------------------------------- 
+			BALISE SPAN
+
+			AFFECT LA SELECTION DE LA BALISE SPAN A UNE VARIABLE,
+			PUIS CHANGE LA COULEUR DU TEXT
+			-------------------------------------------------------
+			*/
+			let maBalise = $('span') // Je sélectionne l'élément span et le garde en mémoire dans la variable "maBalise"
+
+			$(maBalise).css('color', 'purple') // Je change la propriété css color de ma Balise (SPAN)
+			
+			/* 
+			---------------------------------------
+			SÉLECTIONNE UN ID "masection" 
+
+			AFFECT LA SELECTION DE L'ID A UNE VARIABLE,
+			PUIS CHANGE LA COULEUR DU TEXT
+			---------------------------------------
+			*/
+			let maSection = $('section')
+
+			$(maSection).css('color', 'red')
+
+			document.querySelectorAll('[data-code]').forEach(el => {
+				el.addEventListener('mouseenter', function(e) {
+					let tooltip = document.createElement('div');
+					tooltip.className = 'tooltip-code';
+					tooltip.innerText = this.getAttribute('data-code');
+					document.body.appendChild(tooltip);
+					const rect = this.getBoundingClientRect();
+					tooltip.style.left = (rect.left + window.scrollX + rect.width/2 - tooltip.offsetWidth/2) + 'px';
+					tooltip.style.top = (rect.top + window.scrollY - tooltip.offsetHeight - 10) + 'px';
+					tooltip.style.opacity = 1;
+					this._tooltip = tooltip;
+				});
+				el.addEventListener('mouseleave', function() {
+					if (this._tooltip) {
+						this._tooltip.remove();
+						this._tooltip = null;
+					}
+				});
+			});
+		</script>
+
+		<script src="../js/app-jquery.js"></script>
+		<script src="../js/drag_drop-jquery.js"></script>
+		<script src="../js/script-annexe.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+	</body>
+</html>

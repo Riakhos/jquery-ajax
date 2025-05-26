@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<title>E-Shop Formulaire</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+		<link href="../../css/style.css" rel="stylesheet">
+		<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+	</head>
+	<body>
+        
+        <nav class="main-nav">
+            <div class="nav-content">
+                <a href="../../index.html" class="logo-link">
+                    <img src="../../assets/img/Image20241113115512.png" alt="Image d'accueil" class="logo-img">
+                </a>
+                <div class="menu-burger">
+                    <img src="../../assets/img/burger.png" alt="Menu" id="burger-menu">
+                </div>
+                <ul>
+                    <li><a href="../../00 - tableau/index.html">Tableau</a></li>
+                    <li><a href="../../01 - jquery/index.html">Jquery</a></li>
+                    <li><a href="../../02 - ajax/index.html">Ajax</a></li>
+                    <li><a href="../../tp_e-shop-front/index.html" class="active">TP_E-SHOP-FRONT</a></li>
+                </ul>
+            </div>
+        </nav>
+
+		<!-- Navigation -->
+		<header>
+			<nav class="navbar navbar-expand-lg navbar-light bg-light">
+				<div class="container-fluid">
+					<a class="navbar-brand" href="../index.html">Home</a>
+					<!-- Bouton burger Bootstrap -->
+					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+						aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse" id="navbarNav">
+						<ul class="navbar-nav ms-auto">
+							<li class="nav-item">
+								<a class="nav-link active" href="formulaire.html">Add Article</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="../detail/detail-article.html">Detail Article</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="../update/update-article.html">Update Article</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</header>	
+		<!-- Fin Navigation -->
+
+		<!-- Formulaire -->
+		<div class="container mt-5">
+			<h1 class="text-center mb-4">Formulaire d'ajout d'article</h1>
+
+			<form id="postForm">
+				<div class="mb-3">
+					<label for="name" class="form-label">Nom de l'article</label>
+					<input type="text" class="form-control" name="name" id="name" required>
+				</div>
+
+				<div class="mb-3">
+					<label for="category" class="form-label">Catégorie de l'article</label>
+					<input type="text" class="form-control" name="category" id="category" required>
+				</div>
+
+				<div class="mb-3">
+					<label for="brand" class="form-label">Marque de l'article</label>
+					<input type="text" class="form-control" name="brand" id="brand" required>
+				</div>
+				
+				<div class="mb-3">
+					<label for="price" class="form-label">Prix de l'article</label>
+					<input type="number" class="form-control" name="price" id="price" step="0.01" required>
+				</div>
+				
+				<div class="mb-3">
+					<label for="content" class="form-label">Contenu de l'article</label>
+					<textarea class="form-control" name="content" id="content" rows="4" required></textarea>
+				</div>
+				
+				<div class="mb-3">
+					<label for="stock" class="form-label">Stock de l'article</label>
+					<input type="number" class="form-control" name="stock" id="stock" required>
+				</div>
+				
+				<div class="mb-3 form-check">
+					<input type="checkbox" class="form-check-input" name="online" id="online">
+					<label class="form-check-label" for="online">Disponibilité de l'article</label>
+				</div>
+				
+				<div class="mb-3">
+					<label for="img" class="form-label">URL de l'image</label>
+					<input type="url" class="form-control" name="img" id="img" required>
+				</div>
+				
+				<button type="submit" class="btn btn-primary w-100">Ajouter l'article</button>
+			</form>
+		</div>		
+		<!-- Fin Formulaire -->	
+		
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+		<script src="postArticle.js"></script>
+	    <script src="../../js/script-annexe1.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+	</body>
+</html>
