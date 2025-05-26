@@ -23,7 +23,7 @@ $(document).ready(() => {
 	//* Requête AJAX pour obtenir les articles
 	$.ajax({
 		type: "GET",
-		url: "https://richard.bonnegent.fr:8000/api/article/get",
+		url: "https://richard.bonnegent.fr/jquery-ajax/api/article/get",
 		cache: false, //* Désactive le cache pour avoir des données à jour
 		success: (response) => {
 			if (Array.isArray(response)) {
