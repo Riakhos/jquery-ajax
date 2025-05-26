@@ -32,7 +32,7 @@ $(document).ready( () => {
 	//* Requête AJAX pour obtenir les articles
 	$.ajax({
 		type: "GET",
-		url: `http://localhost:8000/api/article/get`,
+		url: `https://richard.bonnegent.fr/jquery-ajax/api/article/get`,
 		cache: false, //* Désactive le cache pour avoir des données à jour
 		success: (response) => {
 			console.log(response);
@@ -55,7 +55,7 @@ $(document).ready( () => {
 							//* Requête AJAX pour supprimer l'article
 							$.ajax({
 								type: "DELETE",  //* Utilisation de la méthode DELETE pour supprimer
-								url: `http://localhost:8000/api/article/delete/${article._id}`,  //* Remplacement de :idArticle par l'ID réel
+								url: `https://richard.bonnegent.fr/jquery-ajax/api/article/delete/${article._id}`,  //* Remplacement de :idArticle par l'ID réel
 								success: () => {
 									alert("Article supprimé avec succès!");
 									//* Rediriger l'utilisateur vers la liste des articles ou la page d'accueil

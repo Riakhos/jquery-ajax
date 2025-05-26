@@ -23,7 +23,7 @@ $('#postForm').on('submit', (event) => {
 	//* Envoi des données via une requête Ajax
 	$.ajax({
 		type: "POST",
-		url: "http://localhost:8000/api/article/add",
+		url: "https://richard.bonnegent.fr/jquery-ajax/api/article/add",
 		data: JSON.stringify(articleDataForm),
 		contentType: "application/json",
 		success: (response) => {

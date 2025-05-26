@@ -5,7 +5,7 @@ $(document).ready(() => {
     // Récupère les données de l'article et remplit le formulaire
     $.ajax({
         type: "GET",
-        url: `http://localhost:8000/api/article/get/${articleId}`,
+        url: `https://richard.bonnegent.fr/jquery-ajax/api/article/get/${articleId}`,
         success: (response) => {
             if (response) {
                 $('#name').val(response.name);
