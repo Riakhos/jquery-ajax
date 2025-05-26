@@ -47,7 +47,7 @@ $(document).ready(() => {
 
         // Envoie les données via une requête AJAX pour mettre à jour l'article
         $.ajax({
-            url: `http://localhost:8000/api/article/update/${articleId}`,
+            url: `https://richard.bonnegent.fr/jquery-ajax/api/article//update/${articleId}`,
             type: 'PUT',
             contentType: 'application/json',
             data: JSON.stringify(articleDataForm),
